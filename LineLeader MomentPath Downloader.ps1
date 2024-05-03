@@ -33,9 +33,6 @@ param(
 # Get all files in the folder
 $files = Get-ChildItem -Path $FolderPath -File
 
-<## Set the path to the folder containing the files
-$folderPath = "C:\Users\abranagan\ProjectLBA\2024-04-02 LBA Catchup"#>
-
 # Get all files in the folder
 $files = Get-ChildItem -Path $folderPath -File
 
