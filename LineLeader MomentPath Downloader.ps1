@@ -31,9 +31,6 @@ param(
 )
 
 # Get all files in the folder
-$files = Get-ChildItem -Path $FolderPath -File
-
-# Get all files in the folder
 $files = Get-ChildItem -Path $folderPath -File
 
 foreach ($file in $files) {
@@ -109,7 +106,6 @@ foreach ($file in $files) {
         $counter = 1
         foreach ($file in $renumberedFiles) {
             $newFileName = "{0}_{1:D2}{2}" -f $subfolderName, $counter, $file.Extension
-            $newFilePath = Join-Path -Path $subfolderPath -ChildPath $newFileName
             Rename-Item -Path $file.FullName -NewName $newFileName -Force
             $counter++
         }
